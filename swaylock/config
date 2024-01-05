@@ -36,18 +36,12 @@ grace-no-touch
 
 # Show/Hide indicator circle
 indicator
-
-# smaller indicator
 indicator-radius=200
-
-# bigger indicator
-# indicator-radius=300
-
 indicator-thickness=10
 indicator-caps-lock
+hide-keyboard-layout
 
 # Define all colors
-
 key-hl-color=00000066
 separator-color=00000000
 

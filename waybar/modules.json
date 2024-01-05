@@ -178,7 +178,7 @@
     // Rofi Application Launcher
     "custom/appmenu": {
         // START APPS LABEL
-        "format": "Apps",
+"format": "󰀻",
         // END APPS LABEL
         "on-click": "rofi -show drun -replace",
         "on-click-right": "~/dotfiles/hypr/scripts/keybindings.sh",
@@ -212,9 +212,10 @@
     // Clock
     "clock": {
         // "timezone": "America/New_York",
+        "format": "{:%a, %e of %B. %R}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // START CLOCK FORMAT
-        "format-alt": "{:%Y-%m-%d}"
+"format-alt": "{:%d/%m/%Y %R}"
         // END CLOCK FORMAT
     },
 
@@ -244,8 +245,44 @@
         "on-click": "alacritty -e htop"
     }, 
 
-    "hyprland/language": {
-        "format": "/ K {short}"
+    // Bluetooth
+    "bluetooth": {
+        "format": "",
+        "tooltip-format": " {status}",
+        "format-disabled": "",
+        "format-off": "",
+        "interval": 30,
+        "on-click": "blueman-manager"
+    },
+
+    // Network
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "",
+        "format-ethernet": "  {ipaddr}",
+        "format-disconnected": "Not connected", //An empty format will hide the module.
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "~/dotfiles/.settings/networkmanager.sh"
+    },
+
+    // Battery
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}   {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{icon}  {time}",
+        "format-good": " ",
+        "format-full": " ",
+        "format-icons": [" ", " ", " ", " ", " "]
     },
 
     // Group Hardware
@@ -261,7 +298,9 @@
             "disk",
             "cpu",
             "memory",
-            "hyprland/language"
+            "bluetooth",
+            "network",
+            "battery"
         ]
     },
     
@@ -289,36 +328,6 @@
          ]
     },
 
-    // Network
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": "   {signalStrength}%",
-        "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "Not connected", //An empty format will hide the module.
-        "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50,
-        "on-click": "~/dotfiles/.settings/networkmanager.sh"
-    },
-
-    // Battery
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
-
     // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -330,8 +339,8 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            // "hands-free": "",
+            // "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -340,13 +349,8 @@
         "on-click": "pavucontrol"
     },
 
-    // Bluetooth
-    "bluetooth": {
-        "format": " {status}",
-        "format-disabled": "",
-        "format-off": "",
-        "interval": 30,
-        "on-click": "blueman-manager"
+    "hyprland/language": {
+        "format": "{short} {variant}"
     },
 
     // Other
