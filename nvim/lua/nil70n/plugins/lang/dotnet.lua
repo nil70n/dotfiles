@@ -1,5 +1,5 @@
-return {
-  { 
+local M = {
+  {
     'JesperLundberg/projektgunnar.nvim',
     event = 'VeryLazy',
     dependencies = {
@@ -7,5 +7,9 @@ return {
     }
   },
   { "Issafalcon/neotest-dotnet" },
-  { "Hoffs/omnisharp-extended-lsp.nvim" },
+  {
+    "Hoffs/omnisharp-extended-lsp.nvim",
+  },
 }
+
+return M
