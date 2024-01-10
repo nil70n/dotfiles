@@ -2,7 +2,7 @@ local wk = require('which-key')
 
 wk.register({
   g = {
-    name = "Git",
+    name = "Go to",
     g = { '<cmd>LazyGitCurrentFile<CR>', 'Current Git Repo' },
     s = { '<cmd>AdvancedGitSearch<CR>', 'Advanced Git Search' },
     c = { '<cmd>Telescope git_commits<CR>', 'Search Git Commits' },
