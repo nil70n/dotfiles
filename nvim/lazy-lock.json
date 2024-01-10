@@ -36,6 +36,7 @@
   "popup.nvim": { "branch": "master", "commit": "b7404d35d5d3548a82149238289fa71f7f6de4ac" },
   "projektgunnar.nvim": { "branch": "master", "commit": "d3ad226b0a3320767ab85ddd7868630cff1647c8" },
   "rose-pine": { "branch": "main", "commit": "92762f4fa2144c05db760ea254f4c399a56a7ef5" },
+  "startup.nvim": { "branch": "master", "commit": "c6ba324f9eba0c23b675b53af431346aab893268" },
   "tagalong.vim": { "branch": "main", "commit": "5a2bbf2b1d5b657685a49d48d98a4aa921c1fde3" },
   "telescope-color-picker.nvim": { "branch": "main", "commit": "9504c28222758d1b4638aefe66e566bfd1ed6fe0" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "8e0543365fe5781c9babea7db89ef06bcff3716d" },
