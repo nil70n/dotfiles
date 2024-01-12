@@ -24,3 +24,11 @@ wk.register({
     y = { '<cmd>Telescope neoclip<CR>', 'Yank list' },
   },
 }, { prefix = '<leader>' })
+
+wk.register({
+  m = {
+    name = "Marks",
+    a = { '<cmd>Telescope vim_bookmarks all<CR>', 'All' },
+    c = { '<cmd>Telescope vim_bookmarks current_file<CR>', 'Current File' },
+  }
+})

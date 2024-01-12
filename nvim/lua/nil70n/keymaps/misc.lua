@@ -15,8 +15,5 @@ wk.register({
     d = { "<cmd>DBUIToggle<CR>", "DB UI (dadbod)"},
     j = { "<cmd>TSJToggle<CR>", "Split/Join (treesj)" },
   },
-  f = {
-    name = "Find",
-  }
 }, lead_opts)
 
