@@ -31,7 +31,7 @@ M.register_maps = function(ev)
         name = "Workspace",
         a = { vim.lsp.buf.add_workspace_folder, 'Add folder' },
         r = { vim.lsp.buf.remove_workspace_folder, 'Remove folder' },
-        l = { print(vim.inspect(vim.lsp.buf.list_workspace_folders())), 'List folders' },
+        l = { function () print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end, 'List folders' },
       },
       D = { vim.lsp.buf.type_definition, 'Type definition' },
       r = {

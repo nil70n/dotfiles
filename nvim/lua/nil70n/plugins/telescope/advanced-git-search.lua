@@ -5,4 +5,7 @@ return {
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
   },
+  config = function()
+    require("telescope").load_extension("advanced_git_search")
+  end
 }

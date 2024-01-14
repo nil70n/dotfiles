@@ -1,4 +1,4 @@
-local M = {
+return {
   {
     'JesperLundberg/projektgunnar.nvim',
     event = 'VeryLazy',
@@ -11,5 +11,3 @@ local M = {
     "Hoffs/omnisharp-extended-lsp.nvim",
   },
 }
-
-return M

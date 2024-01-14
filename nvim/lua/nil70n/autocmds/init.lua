@@ -39,7 +39,9 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = userLspConfigGroup,
-  callback = function(ev) keymaps.register_maps(ev) end,
+  callback = function(ev)
+    keymaps.register_maps(ev)
+  end,
 })
 
 vim.api.nvim_create_autocmd('TextYankPost', {

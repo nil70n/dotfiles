@@ -3,7 +3,6 @@ return {
     'akinsho/toggleterm.nvim',
     version = "*",
     config = function()
-      local wk       = require('which-key')
       local Terminal = require('toggleterm.terminal').Terminal
       local term     = Terminal:new({
         dir = "git_dir",
@@ -23,13 +22,6 @@ return {
         -- TODO: Implement multiple terminal instances using vim.v.count1
         term:toggle()
       end
-
-      wk.register({
-        t = {
-          name = "Toggle",
-          t = { "<cmd>lua TermToggle()<CR>", "Terminal" },
-        },
-      }, { prefix = "<leader>", noremap = true })
     end
   },
 }
