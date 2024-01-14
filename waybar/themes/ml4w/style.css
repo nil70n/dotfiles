@@ -42,8 +42,8 @@ window#waybar {
     background: @workspacesbackground1;
     margin: 2px 1px 3px 1px;
     padding: 0px 1px;
-    border-radius: 15px;
-    border: 0px;
+    border-radius: 12px;
+    border: none;
     font-weight: bold;
     font-style: normal;
     opacity: 0.8;
@@ -54,8 +54,8 @@ window#waybar {
 #workspaces button {
     padding: 0px 5px;
     margin: 4px 3px;
-    border-radius: 15px;
-    border: 0px;
+    border-radius: 12px;
+    border: none;
     color: @textcolor1;
     background-color: @workspacesbackground2;
     transition: all 0.3s ease-in-out;
@@ -65,7 +65,7 @@ window#waybar {
 #workspaces button.active {
     color: @textcolor1;
     background: @workspacesbackground2;
-    border-radius: 15px;
+    border-radius: 12px;
     min-width: 40px;
     transition: all 0.3s ease-in-out;
     opacity:1.0;
@@ -74,7 +74,7 @@ window#waybar {
 #workspaces button:hover {
     color: @textcolor1;
     background: @workspacesbackground2;
-    border-radius: 15px;
+    border-radius: 12px;
     opacity:0.7;
 }
 
@@ -83,7 +83,7 @@ window#waybar {
  * ----------------------------------------------------- */
 
 tooltip {
-    border-radius: 10px;
+    border-radius: 12px;
     background-color: @backgroundlight;
     opacity:0.8;
     padding:20px;
@@ -100,7 +100,7 @@ tooltip label {
 
 #window {
     background: @backgroundlight;
-    margin: 5px 15px 5px 0px;
+    margin: 3px 15px 3px 0px;
     padding: 2px 10px 0px 10px;
     border-radius: 12px;
     color:@textcolor2;
@@ -121,16 +121,16 @@ window#waybar.empty #window {
     background: @backgroundlight;
     margin: 3px 15px 3px 0px;
     padding:0px;
-    border-radius: 15px;
+    border-radius: 12px;
     font-weight: normal;
     font-style: normal;
     opacity:0.8;
-    border: 3px solid @backgroundlight;
+    border: 2px solid @backgroundlight;
 }
 
 #taskbar button {
     margin:0;
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 0px 5px 0px 5px;
 }
 
@@ -162,7 +162,6 @@ window#waybar.empty #window {
 #custom-cliphist, 
 #custom-wallpaper, 
 #custom-settings, 
-#custom-wallpaper, 
 #custom-system,
 #custom-waybarthemes {
     margin-right: 23px;
@@ -197,10 +196,9 @@ window#waybar.empty #window {
 }
 
 #idle_inhibitor.activated {
-    background-color: #dc2f2f;
     font-size: 16px;
-    color:#ffffff;
-    border-radius: 15px;
+    color:#dc2f2f;
+    border-radius: 12px;
     padding: 2px 10px 0px 10px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;    
@@ -214,11 +212,11 @@ window#waybar.empty #window {
     background-color: @backgrounddark;
     font-size: 16px;
     color: @textcolor1;
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 0px 10px 0px 10px;
-    margin: 3px 15px 3px 14px;
+    margin: 3px 15px 3px 6px;
     opacity:0.8;
-    border:3px solid @bordercolor;
+    border:2px solid @bordercolor;
 }
 
 /* -----------------------------------------------------
@@ -226,7 +224,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-exit {
-    margin: 0px 20px 0px 0px;
+    margin: 0px 10px 0px 0px;
     padding:0px;
     font-size:20px;
     color: @iconcolor;
@@ -237,27 +235,30 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-    background-color: @backgroundlight;
+    /* background-color: @backgroundlight; */
     font-size: 16px;
-    color: @textcolor2;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 5px 15px 5px 0px;
+    /* color: @textcolor2; */
+    border-radius: 12px;
+    padding: 2px 5px 0px 5px;
+    margin: 5px 5px 5px 0px;
     opacity:0.8;
+    color: @iconcolor;
 }
 
 #custom-updates.green {
-    background-color: @backgroundlight;
+    /* background-color: @backgroundlight; */
 }
 
 #custom-updates.yellow {
-    background-color: #ff9a3c;
-    color: #FFFFFF;
+    /* background-color: #ff9a3c; */
+    /* color: #FFFFFF; */
+    color: #ff9a3c;
 }
 
 #custom-updates.red {
-    background-color: #dc2f2f;
-    color: #FFFFFF;
+    /* background-color: #dc2f2f; */
+    /* color: #FFFFFF; */
+    color: #dc2f2f;
 }
 
 /* -----------------------------------------------------
@@ -268,7 +269,7 @@ window#waybar.empty #window {
     background-color: @backgroundlight;
     font-size: 16px;
     color: @textcolor2;
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 2px 10px 0px 10px;
     margin: 5px 15px 5px 0px;
     opacity:0.8;
@@ -297,11 +298,11 @@ window#waybar.empty #window {
     background-color: @backgrounddark;
     font-size: 16px;
     color: @textcolor1;
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 1px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
+    margin: 3px 6px 3px 0px;
     opacity:0.8;
-    border:3px solid @bordercolor;   
+    border:2px solid @bordercolor;   
 }
 
 /* -----------------------------------------------------
@@ -309,13 +310,14 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-    background-color: @backgroundlight;
+    /* background-color: @backgroundlight; */
     font-size: 16px;
-    color: @textcolor2;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 5px 15px 5px 0px;
-    opacity:0.8;
+    /* color: @textcolor2; */
+    border-radius: 12px;
+    padding: 2px 0px 0px 0px;
+    margin: 5px 5px 5px 0px;
+    /* opacity:0.8; */
+    color: @iconcolor;
 }
 
 #pulseaudio.muted {
@@ -331,7 +333,7 @@ window#waybar.empty #window {
     background-color: @backgroundlight;
     font-size: 25px;
     color: @textcolor2;
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 2px 5px 0px 5px;
     margin: 5px 5px 5px 0px;
     /* opacity:0.8; */
@@ -362,7 +364,7 @@ window#waybar.empty #window {
     /* font-size: 16px; */
     font-size: 20px;
     /* color: @textcolor2; */
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 2px 5px 0px 5px;
     margin: 5px 5px 5px 0px;
     /* opacity:0.8; */
@@ -385,7 +387,7 @@ window#waybar.empty #window {
     /* font-size: 16px; */
     font-size: 20px;
     /* color: @textcolor2; */
-    border-radius: 15px;
+    border-radius: 12px;
     padding: 2px 5px 0px 5px;
     margin: 5px 0px 5px 0px;
     /* opacity:0.8; */

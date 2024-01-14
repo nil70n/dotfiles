@@ -31,7 +31,7 @@
         "tooltip" : true,
         "format" : "{}",
         "interval" : 30,
-        "exec" : "~/dotfiles/waybar/scripts/waybar-wttr.py",
+        "exec" : "python ~/dotfiles/waybar/scripts/waybar-wttr.py",
         "return-type" : "json"
     },
 
@@ -211,12 +211,21 @@
 
     // Clock
     "clock": {
-        // "timezone": "America/New_York",
-        "format": "{:%a, %e of %B. %R}",
+        "format": "{:%A, %B %e, %R}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // START CLOCK FORMAT
-"format-alt": "{:%d/%m/%Y %R}"
+"format-alt": "{:%d/%m/%Y %R}",
         // END CLOCK FORMAT
+        "calendar": {
+          "on-scroll": 1,
+          "format": {
+            "today": "<span color='#ff6699'><b>{}</b></span>"
+          }
+        },
+        "actions": {
+          "on-scroll-up": "shift_up",
+  		    "on-scroll-down": "shift_down"
+        }
     },
 
     // System
@@ -298,9 +307,12 @@
             "disk",
             "cpu",
             "memory",
+            "battery",
             "bluetooth",
             "network",
-            "battery"
+            "pulseaudio",
+            "custom/updates",
+            "idle_inhibitor"
         ]
     },
     

@@ -33,11 +33,10 @@
     "modules-left": [
         "custom/appmenu"
         ,"custom/settings"
-        ,"custom/waybarthemes"
+        // ,"custom/waybarthemes"
         ,"custom/wallpaper"
         ,"wlr/taskbar"
         // ,"group/quicklinks"
-        // ,"custom/weather"
         ,"hyprland/window"
     ],
 
@@ -48,21 +47,16 @@
 
     // Modules Right    
     "modules-right": [
-        "custom/updates",
-        "pulseaudio",
+        "custom/weather",
         // START BT TOOGLE
 //"bluetooth",
         // END BT TOOGLE
-//"battery", 
-//"network",
         "group/hardware",
-        "custom/cliphist",
-        "idle_inhibitor",
+        "hyprland/language",
         // START TRAY TOOGLE
 "tray",
-        "hyprland/language",
         // END TRAY TOOGLE
-        "clock",
-        "custom/exit"
+        "custom/exit",
+        "clock"
     ]
 }

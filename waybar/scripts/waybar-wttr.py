@@ -99,7 +99,7 @@ country = weather['nearest_area'][0]['country'][0]['value']
 current_condition = ' '+WEATHER_CODES[weather['current_condition'][0]['weatherCode']] + \
      " "+extrachar+weather['current_condition'][0]['FeelsLikeC']+"°"
 
-data['text'] = f"{city} {current_condition}"
+data['text'] = f"{city} {current_condition}     "
 data['tooltip'] = f"{city}, {region} - {country}\n\n"
 data['tooltip'] += f"<b>{weather['current_condition'][0]['weatherDesc'][0]['value']} {weather['current_condition'][0]['temp_C']}°</b>\n"
 data['tooltip'] += f"Feels like: {weather['current_condition'][0]['FeelsLikeC']}°\n"
