@@ -1,0 +1,30 @@
+#
+# ~/.aliases
+#
+
+# Core
+alias cat='bat --style=auto'
+alias ls='exa --icons'
+alias grep='rg --color=auto'
+
+# nvim
+alias v='nvim'
+
+# Custom
+alias battery='cat /sys/class/power_supply/BAT0/capacity' # Battery level
+alias mountusb='f() { sudo mount -o gid=users,fmask=113,dmask=002 /dev/$1 /mnt/usbdrive };f'
+
+## Volume Control
+# alias vol='pactl get-sink-volume @DEFAULT_SINK@'
+# alias vol+='pactl set-sink-volume @DEFAULT_SINK@ +10%'
+# alias vol-='pactl set-sink-volume @DEFAULT_SINK@ -10%'
+# alias voloff='pactl set-sink-volume @DEFAULT_SINK@ -100%'
+
+## Emacs
+alias emacs="emacsclient -c -a 'emacs' &"
+
+## Obsidian
+# alias obsidian="nohup obsidian --enable-ozone --ozone-platform=wayland &"
+
+## Fuzzy find file and open in Neovim
+alias fdx="fd --type f --hidden --exclude .git | fzf-tmux -p | xargs nvim"

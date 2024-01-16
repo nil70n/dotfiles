@@ -256,7 +256,7 @@
 
     // Bluetooth
     "bluetooth": {
-        "format": "",
+        "format": " ",
         "tooltip-format": " {status}",
         "format-disabled": "",
         "format-off": "",
@@ -303,16 +303,17 @@
             "transition-left-to-right": false
         },        
         "modules": [
-            "custom/system",
-            "disk",
-            "cpu",
-            "memory",
-            "battery",
-            "bluetooth",
-            "network",
-            "pulseaudio",
-            "custom/updates",
-            "idle_inhibitor"
+             "custom/system"
+            ,"disk"
+            ,"cpu"
+            ,"memory"
+            ,"battery"
+            ,"bluetooth"
+            ,"network"
+            ,"pulseaudio"
+            ,"custom/updates"
+            ,"idle_inhibitor"
+            ,"custom/exit"
         ]
     },
     
@@ -344,18 +345,18 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "   {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " ",
         "format-icons": {
-            "headphone": "",
+            "headphone": " ",
             // "hands-free": "",
             // "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
             "default": ["", " ", " "]
         },
         "on-click": "pavucontrol"

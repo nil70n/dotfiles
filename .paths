@@ -1,0 +1,34 @@
+#
+# ~/.paths
+#
+
+### Local
+export PATH=$HOME/.local/bin:$PATH
+
+### Cargo
+export PATH=$HOME/.cargo/bin:$PATH
+
+### .NET
+export PATH=$HOME/.dotnet/tools:$PATH
+export PATH=$HOME/.dotnet:$PATH
+export DOTNET_ROOT=$HOME/.dotnet
+
+### Doom Emacs
+export PATH=$HOME/.config/emacs/bin:$PATH 
+
+### AWS X-Ray
+#export PATH=$HOME/xray-daemon:$PATH
+
+### Homebrew
+#export PATH=$HOME/linuxbrew/.linuxbrew/bin/brew:$PATH
+
+### pnpm
+export PNPM_HOME="/home/nilton/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# Laravel
+#export PATH=$HOME/.config/composer/vendor/bin:$PATH
+
