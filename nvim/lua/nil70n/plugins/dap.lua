@@ -11,11 +11,11 @@ local keymaps = function()
   --   end
 
   wk.register({
-    r = { function() dap.continue() end, 'Debugger: Run / Continue' },
-    n = { function() dap.step_over() end, 'Debugger: Step Over' },
-    i = { function() dap.step_into() end, 'Debugger: Step Into' },
-    o = { function() dap.step_out() end, 'Debugger: Step Out' },
-  }, { prefix = '<M>' })
+    ['<M-r>'] = { function() dap.continue() end, 'Debugger: Run / Continue' },
+    ['<M-n>'] = { function() dap.step_over() end, 'Debugger: Step Over' },
+    ['<M-i>'] = { function() dap.step_into() end, 'Debugger: Step Into' },
+    ['<M-o>'] = { function() dap.step_out() end, 'Debugger: Step Out' },
+  })
 
   wk.register({
     d = {
@@ -40,7 +40,7 @@ local configurations = function()
 
   dap.adapters.coreclr = {
     type = 'executable',
-    command = '/usr/local/bin/netcoredbg/netcoredbg',
+    command = '/usr/bin/netcoredbg',
     args = { '--interpreter=vscode' }
   }
 
@@ -67,5 +67,13 @@ return {
   {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap" },
+    config = function()
+      local dap, dapui = require("dap"), require("dapui")
+
+      dap.listeners.before.attach.dapui_config = function() dapui.open() end
+      dap.listeners.before.launch.dapui_config = function() dapui.open() end
+      dap.listeners.before.event_terminated.dapui_config = function() dapui.close() end
+      dap.listeners.before.event_exited.dapui_config = function() dapui.close() end
+    end
   },
 }

@@ -1,3 +1,11 @@
+local keymap = function()
+  local wk = require('which-key')
+
+  wk.register({
+    h = { require('floating-help').toggle, "Help" },
+  }, { prefix = "<leader>" })
+end
+
 return {
   {
     'Tyler-Barham/floating-help.nvim',
@@ -18,6 +26,8 @@ return {
       cmd_abbrev('help', 'FloatingHelp')
       cmd_abbrev('helpc', 'FloatingHelpClose')
       cmd_abbrev('helpclose', 'FloatingHelpClose')
+
+      keymap()
     end
   },
 }

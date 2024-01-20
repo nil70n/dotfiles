@@ -4,12 +4,8 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # Add SSH keys to the session
-ssh-start() {
-  eval `ssh-agent`
-  ssh-add ~/.ssh/github
-}
+ssh-start() { eval `ssh-agent` && ssh-add ~/.ssh/github }
+ssh-stop() { kill $SSH_AGENT_PID }
 
-ssh-stop() {
-  kill $SSH_AGENT_PID
-}
-
+# Run dettached process silently without logs
+run() { nohup "$@" >&/dev/null & }

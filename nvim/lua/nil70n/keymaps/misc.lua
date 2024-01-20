@@ -5,12 +5,12 @@ wk.register({
 })
 
 wk.register({
-  t = {
-    name = "Toggle",
-    d = { "<cmd>DBUIToggle<CR>", "DB UI (dadbod)" },
-    j = { "<cmd>TSJToggle<CR>", "Split/Join (treesj)" },
-    t = { "<cmd>lua TermToggle()<CR>", "Terminal" },
-    h = { require('floating-help').toggle, "Help" },
+  s = {
+    name = "Show",
+    d = { "<cmd>DBUIToggle<CR>", "Toggle DB UI" },
+    t = { function() TermToggle() end, "Show Terminal" },
+    p = { function() require('harpoon').ui.toggle_quick_menu() end, "Pinned Files Menu" },
+    h = { require('floating-help').toggle, "Toggle Help" },
     -- ['?'] = {
     --   function() require('floating-help').open('t=cppman', vim.fn.expand('<cword>')) end,
     --   "Word Help",
