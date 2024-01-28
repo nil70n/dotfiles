@@ -236,7 +236,7 @@
 
     // CPU
     "cpu": {
-        "format": "/ C {usage}% ",
+        "format": "C {usage}% ",
         "on-click": "alacritty -e htop"
     },
 
@@ -304,13 +304,12 @@
         },        
         "modules": [
              "custom/system"
-            ,"disk"
+            ,"battery"
             ,"cpu"
             ,"memory"
-            ,"battery"
             ,"bluetooth"
-            ,"network"
             ,"pulseaudio"
+            ,"network"
             ,"custom/updates"
             ,"idle_inhibitor"
             ,"custom/exit"

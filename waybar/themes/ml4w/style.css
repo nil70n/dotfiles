@@ -334,8 +334,8 @@ window#waybar.empty #window {
     font-size: 25px;
     color: @textcolor2;
     border-radius: 12px;
-    padding: 2px 5px 0px 5px;
-    margin: 5px 5px 5px 0px;
+    /* padding: 2px 5px 0px 5px; */
+    margin: 5px 5px 5px 5px;
     /* opacity:0.8; */
     /* background-color: transparent; */
     /* color: @iconcolor; */
@@ -365,8 +365,8 @@ window#waybar.empty #window {
     font-size: 20px;
     /* color: @textcolor2; */
     border-radius: 12px;
-    padding: 2px 5px 0px 5px;
-    margin: 5px 5px 5px 0px;
+    /* padding: 2px 5px 0px 5px; */
+    margin: 5px 5px 5px 5px;
     /* opacity:0.8; */
     color: @iconcolor;
 }
@@ -388,8 +388,8 @@ window#waybar.empty #window {
     font-size: 20px;
     /* color: @textcolor2; */
     border-radius: 12px;
-    padding: 2px 5px 0px 5px;
-    margin: 5px 0px 5px 0px;
+    /* padding: 2px 5px 0px 5px; */
+    margin: 5px 5px 5px 5px;
     /* opacity:0.8; */
     color: @iconcolor;
 }
