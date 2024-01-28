@@ -1,11 +1,3 @@
-local keymap = function()
-  local wk = require('which-key')
-
-  wk.register({
-    t = { "<cmd>TableModeToggle<CR>", "Table Mode" }
-  })
-end
-
 return {
   {
     'dhruvasagar/vim-table-mode',

@@ -30,7 +30,7 @@ local telescope_setup = function()
 
   telescope.setup({
     defaults = {
-      layout_strategy = 'center',
+      -- layout_strategy = 'center',
       -- `hidden = true` is not supported in text grep commands.
       vimgrep_arguments = vimgrep_arguments,
       path_display = { "truncate" },
@@ -79,7 +79,6 @@ local telescope_keymaps = function()
   wk.register({
     g = {
       name = "Go to",
-      g = { '<cmd>LazyGitCurrentFile<CR>', 'Current Git Repo' },
       s = { '<cmd>AdvancedGitSearch<CR>', 'Advanced Git Search' },
       c = { '<cmd>Telescope git_commits<CR>', 'Search Git Commits' },
       b = { '<cmd>Telescope git_bcommits<CR>', 'Search Git Commits for Buffer' },

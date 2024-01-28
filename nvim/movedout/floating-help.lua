@@ -3,6 +3,10 @@ local keymap = function()
 
   wk.register({
     h = { require('floating-help').toggle, "Help" },
+    -- ['?'] = {
+    --   function() require('floating-help').open('t=cppman', vim.fn.expand('<cword>')) end,
+    --   "Word Help",
+    -- }
   }, { prefix = "<leader>" })
 end
 

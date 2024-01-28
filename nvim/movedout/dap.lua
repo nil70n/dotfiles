@@ -2,14 +2,6 @@ local keymaps = function()
   local wk = require('which-key')
   local dap = require('dap')
 
-  --   local conditional_breakpoint = function()
-  --     dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
-  --   end
-
-  --   local logging_breakpoint = function()
-  --     dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
-  --   end
-
   wk.register({
     ['<M-r>'] = { function() dap.continue() end, 'Debugger: Run / Continue' },
     ['<M-n>'] = { function() dap.step_over() end, 'Debugger: Step Over' },
@@ -69,6 +61,7 @@ return {
     dependencies = { "mfussenegger/nvim-dap" },
     config = function()
       local dap, dapui = require("dap"), require("dapui")
+      dapui.setup()
 
       dap.listeners.before.attach.dapui_config = function() dapui.open() end
       dap.listeners.before.launch.dapui_config = function() dapui.open() end

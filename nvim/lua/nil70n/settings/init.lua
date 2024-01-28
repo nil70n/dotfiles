@@ -17,11 +17,14 @@ opt.relativenumber = true
 
 -- Interface
 opt.signcolumn = 'yes' -- always show the sign column
-opt.scrolloff = 20 -- minimum number of lines above and below the cursor
+opt.scrolloff = 20     -- minimum number of lines above and below the cursor
 
 -- Search
 opt.ignorecase = true -- ignore case while searching
-opt.smartcase = true -- override ignore case if search pattern contains uppercase chars
+opt.smartcase = true  -- override ignore case if search pattern contains uppercase chars
+
+-- Python3 support
+g.python3_host_prog = '/usr/bin/python3'
 
 require("nil70n.settings.filetype")
 require("nil70n.settings.commands")

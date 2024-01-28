@@ -1,21 +1,9 @@
 local keymaps = require("nil70n.keymaps.lsp")
 
-local visualSettingsGroup = vim.api.nvim_create_augroup('VisualSettings', { clear = true })
 local indentSettingsGroup = vim.api.nvim_create_augroup('IndentSettings', { clear = true })
 local userLspConfigGroup = vim.api.nvim_create_augroup('UserLspConfig', { clear = true })
 
-vim.api.nvim_create_autocmd({ 'ColorScheme' }, {
-  group = visualSettingsGroup,
-  callback = function()
-    vim.cmd([[
-      hi Normal guibg=none
-      hi NonText guibg=none
-      hi Normal ctermbg=none
-      hi NonText ctermbg=none
-    ]])
-  end,
-})
-
+-- Indentation
 vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   group = indentSettingsGroup,
   callback = function()
@@ -28,7 +16,7 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 
 vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   group = indentSettingsGroup,
-  pattern = { '.cs' },
+  pattern = { '*.cs' },
   callback = function()
     vim.o.tabstop = 4
     vim.o.shiftwidth = 4
@@ -37,19 +25,25 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   end,
 })
 
+-- Settings
 vim.api.nvim_create_autocmd('LspAttach', {
   group = userLspConfigGroup,
   callback = function(ev)
-    keymaps.register_maps(ev)
-  end,
-})
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
 
-vim.api.nvim_create_autocmd('TextYankPost', {
-  group = visualSettingsGroup,
-  callback = function()
-    vim.highlight.on_yank({
-      higroup = "IncSearch",
-      timeout = 300
-    })
-  end
+    if client.server_capabilities.completionProvider then
+      vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
+    end
+
+    if client.server_capabilities.definitionProvider then
+      vim.bo[ev.buf].tagfunc = "v:lua.vim.lsp.tagfunc"
+    end
+
+    keymaps.register_maps(ev.buf)
+
+    if (client.name == 'omnisharp') then
+      -- require("nil70n.commands.omnisharp-vim")
+      keymaps.register_maps_omnisharp(ev.buf)
+    end
+  end,
 })

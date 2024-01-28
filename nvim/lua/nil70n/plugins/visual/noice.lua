@@ -1,30 +1,5 @@
 return {
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    priority = 1000,
-    config = function()
-      vim.cmd("colorscheme rose-pine-moon")
-    end,
-  },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require('lualine').setup()
-    end,
-  },
-  'MunifTanjim/nui.nvim',
-  {
-    'rcarriga/nvim-notify',
-    config = function()
-      require('notify').setup({
-        background_colour = '#000000'
-      })
-    end
-  },
-  {
     'folke/noice.nvim',
     event = 'VeryLazy',
     depencencies = {
