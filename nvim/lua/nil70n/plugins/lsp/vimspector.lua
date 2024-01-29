@@ -14,8 +14,8 @@ return {
         ['<M-p>'] = { '<cmd>call vimspector#Pause()<CR>', 'Debugger: Pause' },
         ['<M-s>'] = { '<cmd>call vimspector#Stop()<CR>', 'Debugger: Stop' },
         ['<M-q>'] = { '<cmd>call vimspector#Reset()<CR>', 'Debugger: Quit' },
-        ['<C-u>'] = { '<cmd>call vimspector#UpFrame()<CR>', 'Call Stack Scroll Up' },
-        ['<C-d>'] = { '<cmd>call vimspector#DownFrame()<CR>', 'Call Stack Scroll Down' },
+        ['<M-u>'] = { '<cmd>call vimspector#UpFrame()<CR>', 'Call Stack Scroll Up' },
+        ['<M-d>'] = { '<cmd>call vimspector#DownFrame()<CR>', 'Call Stack Scroll Down' },
       })
 
       wk.register({

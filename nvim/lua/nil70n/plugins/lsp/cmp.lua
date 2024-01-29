@@ -15,6 +15,29 @@ return {
       config = function()
         local cmp = require('cmp')
 
+        -- `/` cmdline setup.
+        cmp.setup.cmdline('/', {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = {
+            { name = 'buffer' }
+          }
+        })
+
+        -- `:` cmdline setup.
+        cmp.setup.cmdline(':', {
+          mapping = cmp.mapping.preset.cmdline(),
+          sources = cmp.config.sources({
+            { name = 'path' }
+          }, {
+            {
+              name = 'cmdline',
+              -- option = {
+              --   ignore_cmds = { 'Man', '!' }
+              -- }
+            }
+          })
+        })
+
         cmp.setup({
           snippet = {
             expand = function(args)
@@ -22,6 +45,7 @@ return {
             end,
           },
           sources = cmp.config.sources({
+            { name = 'wilder' },
             { name = 'treesitter' },
             { name = 'path' },
             { name = 'nvim_lsp' },

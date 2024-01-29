@@ -1,5 +1,6 @@
 {
     "diagnostics.globals": [
-        "vim"
+        "vim",
+        "floating_window_props"
     ]
 }

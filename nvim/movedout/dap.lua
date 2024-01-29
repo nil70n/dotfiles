@@ -51,6 +51,7 @@ end
 return {
   {
     'mfussenegger/nvim-dap',
+    enabled = false,
     config = function()
       configurations()
       keymaps()

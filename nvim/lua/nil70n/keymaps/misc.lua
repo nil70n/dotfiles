@@ -2,6 +2,7 @@ local wk = require('which-key')
 
 wk.register({
   ["<ESC>"] = { "<cmd>noh<CR>", "No Highlighting" },
+  ['<C-q>'] = { '<cmd>q<CR>', 'Quit' },
 })
 
 wk.register({
