@@ -14,8 +14,9 @@ prompt typewritten
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/nvm/init-nvm.sh
-source ~/.aliases
+source ~/.env
 source ~/.paths
 source ~/.commands
+source ~/.aliases
 
 eval "$(zoxide init zsh)"

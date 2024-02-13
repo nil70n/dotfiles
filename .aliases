@@ -7,8 +7,14 @@ alias cat='bat --style=auto'
 alias ls='exa --icons'
 alias grep='rg --color=auto'
 
+# Make aliases available when sudo
+alias sudo='sudo '
+
 # nvim
-alias v='nvim'
+alias v='nvim -X'
+alias vim='nvim -X'
+alias vi='nvim -X'
+alias nvim='nvim -X'
 
 # Custom
 alias battery='cat /sys/class/power_supply/BAT0/capacity' # Battery level
@@ -28,3 +34,13 @@ alias emacs="emacsclient -c -a 'emacs' &"
 
 ## Fuzzy find file and open in Neovim
 alias fdx="fd --type f --hidden --exclude .git | fzf-tmux -p | xargs nvim"
+
+alias myip="ip -json route get 8.8.8.8 | jq -r '.[].prefsrc'"
+
+## iptable list
+alias iplist="iptables --verbose --numeric --list --line-numbers"
+
+## WayVNC
+# alias vncrun="run wayvnc -f=60"
+alias vnclisten="wayvncctl --json event-receive"
+alias vncstop="wayvncctl wayvnc-exit"
