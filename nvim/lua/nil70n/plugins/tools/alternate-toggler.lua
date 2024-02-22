@@ -1,12 +1,3 @@
-local keymap = function()
-  local wk = require('which-key')
-
-  wk.register({
-      i = { '<cmd>ToggleAlternate<CR>', 'Alternate' },
-    },
-    { prefix = '<leader>' })
-end
-
 return {
   {
     'rmagatti/alternate-toggler',
@@ -19,7 +10,7 @@ return {
         }
       })
 
-      keymap()
+      vim.keymap.set('n', '<leader>ti', '<cmd>ToggleAlternate<CR>')
     end
   }
 }

@@ -1,1 +1,1 @@
-alacritty -e nmtui
+kitty -e nmtui

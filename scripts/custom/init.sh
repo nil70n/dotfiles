@@ -13,7 +13,6 @@
 #  Custom Scripts
 ###########################################
 
-clear
 installFolder="/home/$USER/dotfiles/hypr"
 
 # Source Helper Functions

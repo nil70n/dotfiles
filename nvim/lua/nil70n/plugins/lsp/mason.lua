@@ -26,14 +26,13 @@ return {
     config = function()
       local lspconfig = require('lspconfig')
       local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-      local secrets = require('nil70n.settings.secrets')
 
       require('mason-lspconfig').setup_handlers({
         function(server_name)
           if server_name == 'grammarly' then
             lspconfig[server_name].setup({
               capabilities = lsp_capabilities,
-              init_options = { client_id = secrets.grammarly.client_id }
+              init_options = { client_id = os.getenv('GRAMMARLY_CLIENT_ID') }
             })
           else
             lspconfig[server_name].setup({ capabilities = lsp_capabilities })

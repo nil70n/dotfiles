@@ -3,9 +3,30 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
+# [[ -v "$SSH_CONNECTION" ]] && neofetch
+
 # Add SSH keys to the session
 ssh-start() { eval `ssh-agent` && ssh-add ~/.ssh/github }
 ssh-stop() { kill $SSH_AGENT_PID }
 
 # Run dettached process silently without logs
 run() { nohup "$@" >&/dev/null & }
+
+vncrun()
+{
+  source /home/nilton/dotfiles/scripts/custom/wayvnc.sh
+}
+
+# v() {
+#     export NVIM_BIN=$(which nvim)
+#     export NODE_CURRENT=$(node -v)
+#     nvm use v16.14.0
+#     $NVIM_BIN $@
+#     nvm use $NODE_CURRENT
+# }
+
+# vi() { v }
+
+bottles () {
+  flatpak run com.usebottles.bottles
+}

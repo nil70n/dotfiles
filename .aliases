@@ -13,8 +13,8 @@ alias sudo='sudo '
 # nvim
 alias v='nvim -X'
 alias vim='nvim -X'
-alias vi='nvim -X'
-alias nvim='nvim -X'
+# alias vi='nvim -X'
+# alias nvim='nvim -X'
 
 # Custom
 alias battery='cat /sys/class/power_supply/BAT0/capacity' # Battery level

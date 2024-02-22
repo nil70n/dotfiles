@@ -8,4 +8,4 @@ require("nil70n.lazy")
 require("nil70n.commands")
 require("nil70n.after")
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme substrata")

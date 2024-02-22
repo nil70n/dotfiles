@@ -1,5 +1,6 @@
 local opt = vim.opt
 local g = vim.g
+local o = vim.o
 
 -- Leader key
 g.mapleader = " "
@@ -25,6 +26,9 @@ opt.smartcase = true  -- override ignore case if search pattern contains upperca
 
 -- Python3 support
 g.python3_host_prog = '/usr/bin/python3'
+
+-- Cursorline
+opt.cursorline = true
 
 require("nil70n.settings.filetype")
 require("nil70n.settings.commands")

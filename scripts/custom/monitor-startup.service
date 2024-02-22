@@ -1,0 +1,8 @@
+[Unit]
+Description=Script
+
+[Service]
+ExecStart=/usr/bin/monitor-startup.sh
+
+[Install]
+WantedBy=sysinit.target

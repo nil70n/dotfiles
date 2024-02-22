@@ -10,4 +10,5 @@ return {
   { 'AlexvZyl/nordic.nvim',        name = 'nordic',     priority = 1000 },
   { 'ribru17/bamboo.nvim',         name = 'bamboo',     priority = 1000 },
   { "tiagovla/tokyodark.nvim",     name = 'tokyodark',  priority = 1000 },
+  { 'lunacookies/vim-substrata',   name = 'substrata',  priority = 1000 },
 }
